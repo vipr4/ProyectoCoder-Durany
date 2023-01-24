@@ -10,14 +10,15 @@
 
 body {
     color: rgb(15, 15, 15);
-    background-image: linear-gradient(#679d58, #98be86, #c9deb5, #679d58);
+    background-image: linear-gradient(#feff19, #ffff32, #ffff4a, #ffffeb);
 }
 
 /* Estilos del header */
 
 header {
     padding: 10px;
-    background-color: #4b9e3d;
+    background-color: #ffff4a;
+    border-bottom: 1px solid rgb(74, 68, 68);
 }
 
 header nav {
@@ -53,11 +54,14 @@ header nav img {
 
 /* Aqui se colocaran los estilos del main */
 
-main {
-    margin-top: 60px;
-}
 main p {
     text-align: center;
     font-size: 1.4rem;
     padding: 60px;
+    margin: 80px 200px;
+    border: 2px solid rgb(74, 68, 68);
+    box-shadow: 1px 0.6px 2px black;
 }
+
+/* Aqui se colocaran los estilos de las secciones de busqueda */
+
