@@ -19,6 +19,7 @@ header {
     padding: 10px;
     background-color: #ffff4a;
     border-bottom: 1px solid rgb(74, 68, 68);
+    position: sticky;
 }
 
 header nav {
@@ -64,4 +65,34 @@ main p {
 }
 
 /* Aqui se colocaran los estilos de las secciones de busqueda */
+
+/* grids */
+
+.grids-section {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+
+    grid-template-areas: 
+    "busqueda imagenes"
+    "busqueda imagenes"
+    "busqueda imagenes";
+}
+
+/* Estilos de la section busqueda */
+
+.busqueda {
+    grid-area: busqueda;
+}
+
+.busqueda div {
+    margin-top: 80px;
+}
+
+.busqueda div h4 {
+    padding-bottom: 20px;
+}
+
+.imagenes-busqueda {
+    grid-area: imagenes;
+}
 
