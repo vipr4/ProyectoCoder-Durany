@@ -53,16 +53,47 @@ header nav img {
     color: black;
 }
 
+
+/* Aqui se colocaran los estilos de la presentacion */
+
+.grids-presentacion {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+
+    grid-template-areas: 
+    "main presentacion"
+    "main presentacion"
+    "main presentacion";
+}
+
 /* Aqui se colocaran los estilos del main */
 
-main p {
-    text-align: center;
-    font-size: 1.4rem;
-    padding: 60px;
-    margin: 80px 200px;
-    border: 2px solid rgb(74, 68, 68);
-    box-shadow: 1px 0.6px 2px black;
+main {
+    grid-area: main;
 }
+
+main p {
+    text-align: left;
+    font-size: 1.4rem;
+    margin: 114px 20px;
+    padding: 60px 16px;
+    border-bottom: 1.6px solid rgb(74, 68, 68);
+    border-top: 1.6px solid rgb(74, 68, 68);
+}
+
+/* Aqui se colocaran los estilos de la section presentacion */
+
+.presentacion {
+    grid-area: presentacion;
+    text-align: center;
+}
+
+.presentacion img {
+    margin-top: 100px;
+    width: 500px;
+    height: 300px;
+}
+
 
 /* Aqui se colocaran los estilos de las secciones de busqueda */
 
@@ -91,6 +122,8 @@ main p {
 .busqueda div h4 {
     padding-bottom: 20px;
 }
+
+/* Estilos de la section busqueda imagenes */
 
 .imagenes-busqueda {
     grid-area: imagenes;
