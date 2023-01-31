@@ -59,11 +59,28 @@ for( let elemento of lista_usuario ){
     console.log( "Edad: " + edad_usuario);
 }
 */
-
+/*
 let img = document.getElementsByClassName("presentacion-2");
 
 img.addEventListener("mouseover" , function(){
 
-    img.src() = "imagenes-2/presentacion-2.png";
+    img.src = "imagenes-2/presentacion-2.png";
 
 })
+*/
+
+let bnts_carrito = document.getElementsByClassName("auriculares");
+
+bnts_carrito.forEach(auriculares => {
+    
+    bnts_carrito.addEventListener("click", function(){
+
+        console.log("Se agregaron auriculares al carrito");
+    })
+});
+
+
+
+
+
+

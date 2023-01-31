@@ -10,7 +10,7 @@
 
 body {
     color: rgb(15, 15, 15);
-    background-image: linear-gradient(#feff19, #ffff32, #ffff4a, #ffffeb);
+    background-image: linear-gradient(#feff19, #ffff32, #ffff4a, #f8f8a3);
 }
 
 /* Estilos del header */
@@ -106,15 +106,22 @@ main p {
 
 .grids-section {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
 
     grid-template-areas: 
-    "busqueda imagenes"
-    "busqueda imagenes"
-    "busqueda imagenes";
+    "busqueda imagenes imagenes-2"
+    "busqueda imagenes imagenes-2"
+    "busqueda imagenes imagenes-2";
 
     border: 1.4px solid rgb(74, 68, 68);
     margin: 80px 160px;
+}
+
+.grids-section img {
+    width: 180px;
+    height: 180px;
+    margin-right: 50px;
+    margin-bottom: 10px;
 }
 
 /* Estilos de la section busqueda */
@@ -137,13 +144,29 @@ main p {
 
 .imagenes-busqueda {
     grid-area: imagenes;
+    text-align: end;
+}
+
+.imagenes-busqueda div {
     margin: 20px 0px;
 }
 
-.imagenes-busqueda img {
-    width: 180px;
-    height: 180px;
-    margin-right: 50px;
-    margin-bottom: 30px;
+.imagenes-busqueda div button {
+    margin-right: 82px;
+}
+
+/* Estilos de la section busqueda imagenes-2 */
+
+.imagenes-busqueda-2 {
+    grid-area: imagenes-2;
+    text-align: center;
+}
+
+.imagenes-busqueda-2 div {
+    margin: 20px 0px;
+}
+
+.imagenes-busqueda-2 div button {
+    margin-right: 40px;
 }
 
