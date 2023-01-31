@@ -53,6 +53,11 @@ header nav img {
     color: black;
 }
 
+.titulo-2 img {
+    height: 20px;
+    width: 20px;
+}
+
 
 /* Aqui se colocaran los estilos de la presentacion */
 
@@ -75,7 +80,7 @@ main {
 main p {
     text-align: left;
     font-size: 1.4rem;
-    margin: 114px 20px;
+    margin: 142px 20px;
     padding: 60px 16px;
     border-bottom: 1.6px solid rgb(74, 68, 68);
     border-top: 1.6px solid rgb(74, 68, 68);
@@ -91,7 +96,7 @@ main p {
 .presentacion img {
     margin-top: 100px;
     width: 500px;
-    height: 300px;
+    height: 350px;
 }
 
 
@@ -107,6 +112,9 @@ main p {
     "busqueda imagenes"
     "busqueda imagenes"
     "busqueda imagenes";
+
+    border: 1.4px solid rgb(74, 68, 68);
+    margin: 80px 160px;
 }
 
 /* Estilos de la section busqueda */
@@ -116,16 +124,26 @@ main p {
 }
 
 .busqueda div {
-    margin-top: 80px;
+    margin-top: 20px;
+    text-align: center;
 }
 
-.busqueda div h4 {
+.busqueda div li {
     padding-bottom: 20px;
+    size: 2rem;
 }
 
 /* Estilos de la section busqueda imagenes */
 
 .imagenes-busqueda {
     grid-area: imagenes;
+    margin: 20px 0px;
+}
+
+.imagenes-busqueda img {
+    width: 180px;
+    height: 180px;
+    margin-right: 50px;
+    margin-bottom: 30px;
 }
 
