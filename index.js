@@ -59,26 +59,27 @@ for( let elemento of lista_usuario ){
     console.log( "Edad: " + edad_usuario);
 }
 */
+
 /*
-let img = document.getElementsByClassName("presentacion-2");
+let imgChange = document.getElementById("presentacionD");
 
-img.addEventListener("mouseover" , function(){
-
-    img.src = "imagenes-2/presentacion-2.png";
-
+imgChange.addEventListener("mouseover", function() {
+    
+    imgChange.src = "imagenes-2/presentacion-2";
 })
 */
 
-let bnts_carrito = document.getElementsByClassName("auriculares");
+/*
+const btns_auris = document.querySelectorAll("btnAuris");
 
-bnts_carrito.forEach(auriculares => {
+btns_auris.forEach(btnAuris => {
     
-    bnts_carrito.addEventListener("click", function(){
+    btnAuris.addEventListener("click", (e) => {
 
-        console.log("Se agregaron auriculares al carrito");
+        alert("Se agregaron auriculares al carrito");
     })
 });
-
+*/
 
 
 
