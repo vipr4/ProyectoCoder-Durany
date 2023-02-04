@@ -45,12 +45,19 @@ header nav img {
 }
 
 .titulo-2 ul li {
-    padding-right: 80px;
+    margin-right: 80px;
+    border-bottom: 1.6px solid rgb(74, 68, 68);
+    padding: 3px;
 }
 
 .titulo-2 a {
     text-decoration: none;
     color: black;
+}
+
+.titulo-2 li:hover {
+    border-bottom: 2px solid rgb(0, 31, 155);
+    transition-duration: 0.2s; 
 }
 
 
@@ -143,16 +150,23 @@ main p {
 
 .busqueda {
     grid-area: busqueda;
+    border-right: 1.8px solid rgb(74, 68, 68);
 }
 
 .busqueda div {
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
+    margin: 100px 30px;
 }
 
 .busqueda div li {
-    padding-bottom: 20px;
+    padding-bottom: 36px;
     size: 2rem;
+    list-style: none;
+}
+
+.dinero {
+    padding-top: 20px;
 }
 
 /* Estilos de la section busqueda imagenes */
@@ -185,3 +199,38 @@ main p {
     margin-right: 40px;
 }
 
+
+
+/* AQUI SE COLOCARAN LOS ESTILOS DE SESION.HTML */
+
+main form {
+    margin: 130px 430px;
+    border-radius: 16px;
+    border: 2px solid black;
+}
+
+.title {
+    text-align: left;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(74, 68, 68);
+}
+
+.title img {
+    height: 22px;
+    width: 22px;
+}
+
+main fieldset {
+    text-align: center;
+    border: none;
+}
+
+main fieldset div {
+    padding: 24px 0px;
+}
+
+main fieldset button {
+    margin-bottom: 20px;
+}

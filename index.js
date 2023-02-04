@@ -60,28 +60,31 @@ for( let elemento of lista_usuario ){
 }
 */
 
+//Cambiar de imagen cuando se pase x arriba
 /*
 let imgChange = document.getElementById("presentacionD");
 
 imgChange.addEventListener("mouseover", function() {
     
-    imgChange.src = "imagenes-2/presentacion-2";
+    imgChange.src="imagenes-2/presentacion-2";
 })
 */
 
+
+//Agregar elementos al carrito
 /*
 const btns_auris = document.querySelectorAll("btnAuris");
 
 btns_auris.forEach(btnAuris => {
     
-    btnAuris.addEventListener("click", (e) => {
+    btnAuris.addEventListener("click", function() {
 
-        alert("Se agregaron auriculares al carrito");
+        alert = ("Se agregaron elementos al carrito");
     })
 });
 */
 
 
-
+/* SCRIPT DE SESION.HTML */
 
 
