@@ -57,7 +57,11 @@ header nav img {
 
 .titulo-2 li:hover {
     border-bottom: 2px solid rgb(0, 31, 155);
-    transition-duration: 0.2s; 
+    transition-duration: 0s; 
+}
+
+.titulo-2 a:hover {
+    color: grey;
 }
 
 
@@ -204,7 +208,7 @@ main p {
 /* AQUI SE COLOCARAN LOS ESTILOS DE SESION.HTML */
 
 main form {
-    margin: 130px 430px;
+    margin: 110px 430px;
     border-radius: 16px;
     border: 2px solid black;
 }
