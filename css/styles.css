@@ -184,6 +184,11 @@ main p {
     margin: 20px 0px;
 }
 
+.imagenes-busqueda div h5{
+    margin-right: 82px;
+    margin-bottom: 20px;
+}
+
 .imagenes-busqueda div button {
     margin-right: 82px;
 }
@@ -197,6 +202,11 @@ main p {
 
 .imagenes-busqueda-2 div {
     margin: 20px 0px;
+}
+
+.imagenes-busqueda-2 div h5{
+    margin-right: 40px;
+    margin-bottom: 20px;
 }
 
 .imagenes-busqueda-2 div button {
