@@ -41,7 +41,7 @@
 
     <!-- Aqui se colocará el main -->
 
-    <main>
+    <main id="main">
         <form>
             <div class="title">
                 <img src="../imagenes-2/diamante-logo2.png" alt="">
@@ -50,19 +50,19 @@
             <fieldset>
                 <div>
                     <label class="data-usuario" for="nombre"> Escribe tu nombre: </label>
-                    <input type="text" name="nombre">
+                    <input type="text" name="nombre" id="nombre">
                 </div>
                 <div>
                     <label class="data-usuario" for="mail"> Escribe tu e-mail: </label>
-                    <input type="text" name="mail">
+                    <input type="text" name="mail" id="mail">
                 </div>
                 <div>
                     <label class="data-usuario" for="provincia"> De que provincia eres: </label>
-                    <input type="text" name="provincia">
+                    <input type="text" name="provincia" id="provincia">
                 </div>
                 <div>
                     <label class="data-usuario" for="password"> Escribe tu contraseña: </label>
-                    <input type="text" name="password">
+                    <input type="text" name="password" id="pass">
                 </div>
                 <button id="btn_registrarse"> Registrarme </button>
                 <button id="btn_ingresar"> Ingresar </button>
@@ -75,5 +75,6 @@
     <footer>
         <h3> Todos los derechos reservados </h3>
     </footer>
+    <script src="../pages/sesion.js"></script>
 </body>
 </html>

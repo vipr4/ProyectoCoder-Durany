@@ -132,12 +132,12 @@ main p {
 
 .grids-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 
     grid-template-areas: 
-    "busqueda imagenes imagenes-2"
-    "busqueda imagenes imagenes-2"
-    "busqueda imagenes imagenes-2";
+    "busqueda imagenes"
+    "busqueda imagenes"
+    "busqueda imagenes";
 
     border: 1.4px solid rgb(74, 68, 68);
     margin: 80px 160px;
@@ -177,42 +177,25 @@ main p {
 
 .imagenes-busqueda {
     grid-area: imagenes;
-    text-align: end;
-}
-
-.imagenes-busqueda div {
-    margin: 20px 0px;
-}
-
-.imagenes-busqueda div h5{
-    margin-right: 82px;
-    margin-bottom: 20px;
-}
-
-.imagenes-busqueda div button {
-    margin-right: 82px;
-}
-
-/* Estilos de la section busqueda imagenes-2 */
-
-.imagenes-busqueda-2 {
-    grid-area: imagenes-2;
     text-align: center;
 }
 
-.imagenes-busqueda-2 div {
-    margin: 20px 0px;
+.auriculares {
+    display: inline-block;
+    margin: 46px 0px;
 }
 
-.imagenes-busqueda-2 div h5{
-    margin-right: 40px;
-    margin-bottom: 20px;
+.auriculares img {
+    margin-left: 40px;
 }
 
-.imagenes-busqueda-2 div button {
-    margin-right: 40px;
+.auriculares-1 {
+    display: inline-block;
 }
 
+.auriculares-1 img {
+    margin-left: 40px;
+}
 
 
 /* AQUI SE COLOCARAN LOS ESTILOS DE SESION.HTML */
@@ -247,4 +230,5 @@ main fieldset div {
 
 main fieldset button {
     margin-bottom: 20px;
+    margin-right: 30px;
 }

@@ -16,17 +16,36 @@ presentacion.addEventListener("mouseout", function(){
 
 //Evento de carrito
 
+// let carrito_storage = [];
+
 function agregar_al_carrito(e){
 
-    console.log("Se clickeo el boton: ", + e.target);
+    console.log("Se agregó al carrito: ", e.target);
 
     let hijo = e.target;
     let padre = hijo.parentNode;
     let abuelo = padre.parentNode;
 
     let nombre_producto = padre.querySelector("h5").textContent;
+    let precio_producto = padre.querySelector("p").textContent;
+    let img_producto = padre.querySelector("img").src;
 
     console.log(nombre_producto);
+    console.log(precio_producto);
+    console.log(img_producto);
+
+    let producto = {
+
+        nombre: nombre_producto,
+        precio: precio_producto,
+        img: img_producto,
+        cantidad:1
+    };
+
+    // Local Storage
+    // carrito_storage.push(producto);
+
+    // mostrar_carrito( producto );
 }
 
 let btn_carrito = document.querySelectorAll(".btnAuris");
