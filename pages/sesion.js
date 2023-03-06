@@ -17,6 +17,8 @@ function datos_de_usuario() {
 
     let arreglo_json = JSON.stringify(arreglo_usuarios);
     localStorage.setItem( "arreglo_clientes", arreglo_json );
+
+    console.log(arreglo_json);
 }
 
 let btn_registrar = document.getElementById("btn_registrarse");
