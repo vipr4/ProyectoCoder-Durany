@@ -14,6 +14,17 @@ presentacion.addEventListener("mouseout", function(){
 })
 
 
+// Evento de cambio de productos (teclado y raton)
+
+let contenedor = document.getElementById("busqueda_imagenes");
+let btn_raton = document.getElementById("teclado_raton");
+
+btn_raton.addEventListener("click", function() {
+
+    contenedor.remove();
+})
+
+
 //Evento de carrito
 
 // let carrito_storage = [];
