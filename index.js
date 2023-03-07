@@ -14,17 +14,6 @@ presentacion.addEventListener("mouseout", function(){
 })
 
 
-// Evento de cambio de productos (teclado y raton)
-
-let contenedor = document.getElementById("busqueda_imagenes");
-let btn_raton = document.getElementById("teclado_raton");
-
-btn_raton.addEventListener("click", function() {
-
-    contenedor.remove();
-})
-
-
 //Evento de carrito
 
 // let carrito_storage = [];
@@ -70,8 +59,38 @@ for ( let boton of btn_carrito){
 }
 
 
+// Evento de cambio de productos (teclado y raton)
 
+let contenedor = document.getElementById("busqueda_imagenes");
+let btn_raton = document.getElementById("teclado_raton");
 
+btn_raton.addEventListener("click", function() {
 
+    contenedor.innerHTML = `<div class="auriculares">
+                                <img src="" alt="" class="">
+                                <h5> Teclado desde js </h5>
+                                <p> $7990 </p>
+                                <button class="btnAuris"> Agregar al carrito </button>
+                            </div>
+                            <div class="auriculares">
+                                <img src="" alt="" class="">
+                                <h5> Raton desde js </h5>
+                                <p> $7590 </p>
+                                <button class="btnAuris"> Agregar al carrito </button>
+                            </div>
+                            <div class="auriculares-1">
+                                <img src="" alt="" class="">
+                                <h5> Teclado y raton desde js </h5>
+                                <p> $6790 </p>
+                                <button class="btnAuris"> Agregar al carrito </button>
+                            </div>
+                            <div class="auriculares-1">
+                                <img src="" alt="" class="">
+                                <h5> Teclado desde js </h5>
+                                <p> $1290 </p>
+                                <button class="btnAuris"> Agregar al carrito </button>
+                            </div>
+    `;
+})
 
 
