@@ -46,7 +46,6 @@ header nav img {
 
 .titulo-2 ul li {
     margin-right: 80px;
-    border-bottom: 1.6px solid rgb(74, 68, 68);
     padding: 3px;
 }
 
@@ -55,13 +54,18 @@ header nav img {
     color: black;
 }
 
+.titulo-2 a img{
+    width: 16px;
+    height: 16px;
+}
+
 .titulo-2 li:hover {
-    border-bottom: 2px solid rgb(0, 31, 155);
-    transition-duration: 0s; 
+    border-bottom: 1.2px solid rgb(0, 31, 155);
+    transition-duration: 0.3s; 
 }
 
 .titulo-2 a:hover {
-    color: grey;
+    color: rgb(62, 84, 155);
 }
 
 
@@ -132,12 +136,12 @@ main p {
 
 .grids-section {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 3fr;
 
     grid-template-areas: 
-    "busqueda imagenes"
-    "busqueda imagenes"
-    "busqueda imagenes";
+    "imagenes"
+    "imagenes"
+    "imagenes";
 
     border: 1.4px solid rgb(74, 68, 68);
     margin: 80px 160px;
@@ -148,29 +152,6 @@ main p {
     height: 180px;
     margin-right: 50px;
     margin-bottom: 10px;
-}
-
-/* Estilos de la section busqueda */
-
-.busqueda {
-    grid-area: busqueda;
-    border-right: 1.8px solid rgb(74, 68, 68);
-}
-
-.busqueda div {
-    margin-top: 20px;
-    text-align: left;
-    margin: 100px 30px;
-}
-
-.busqueda div li {
-    padding-bottom: 36px;
-    size: 2rem;
-    list-style: none;
-}
-
-.dinero {
-    padding-top: 20px;
 }
 
 /* Estilos de la section busqueda imagenes */
@@ -184,18 +165,30 @@ main p {
     display: inline-block;
     margin: 46px 0px;
 }
+.auriculares h5 {
+    margin: 5px 0px;
+}
+.auriculares p {
+    margin: 5px 0px;
+}
 
 .auriculares img {
     margin-left: 40px;
 }
 
-.auriculares-1 {
-    display: inline-block;
+.auriculares img:hover{
+    transition-duration: 0.4s;
+    transform: scale(1.04);
+    border: 1px solid rgb(92, 189, 2);
 }
 
-.auriculares-1 img {
-    margin-left: 40px;
+/* Estilos de botones */
+
+.auriculares button:hover{
+    transition-duration: 0.1s;
+    transform: scale(1.02);
 }
+
 
 
 /* AQUI SE COLOCARAN LOS ESTILOS DE SESION.HTML */

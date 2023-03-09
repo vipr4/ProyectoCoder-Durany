@@ -16,7 +16,7 @@ presentacion.addEventListener("mouseout", function(){
 
 //Evento de carrito
 
-// let carrito_storage = [];
+let carrito_storage = [];
 
 function agregar_al_carrito(e){
 
@@ -30,9 +30,9 @@ function agregar_al_carrito(e){
     let precio_producto = padre.querySelector("p").textContent;
     let img_producto = padre.querySelector("img").src;
 
-    console.log(nombre_producto);
-    console.log(precio_producto);
-    console.log(img_producto);
+    // console.log(nombre_producto);
+    // console.log(precio_producto);
+    // console.log(img_producto);
 
     let producto = {
 
@@ -43,9 +43,13 @@ function agregar_al_carrito(e){
     };
 
     // Local Storage
-    // carrito_storage.push(producto);
+    carrito_storage.push(producto);
 
-    // mostrar_carrito( producto );
+    let guardar_carrito = JSON.stringify(carrito_storage);
+    localStorage.setItem("Lista_productos", guardar_carrito);
+
+    let traer_producto = localStorage.getItem("Lista_productos");
+    console.log(traer_producto);
 }
 
 let btn_carrito = document.querySelectorAll(".btnAuris");
@@ -58,39 +62,5 @@ for ( let boton of btn_carrito){
 
 }
 
-
-// Evento de cambio de productos (teclado y raton)
-
-let contenedor = document.getElementById("busqueda_imagenes");
-let btn_raton = document.getElementById("teclado_raton");
-
-btn_raton.addEventListener("click", function() {
-
-    contenedor.innerHTML = `<div class="auriculares">
-                                <img src="" alt="" class="">
-                                <h5> Teclado desde js </h5>
-                                <p> $7990 </p>
-                                <button class="btnAuris"> Agregar al carrito </button>
-                            </div>
-                            <div class="auriculares">
-                                <img src="" alt="" class="">
-                                <h5> Raton desde js </h5>
-                                <p> $7590 </p>
-                                <button class="btnAuris"> Agregar al carrito </button>
-                            </div>
-                            <div class="auriculares-1">
-                                <img src="" alt="" class="">
-                                <h5> Teclado y raton desde js </h5>
-                                <p> $6790 </p>
-                                <button class="btnAuris"> Agregar al carrito </button>
-                            </div>
-                            <div class="auriculares-1">
-                                <img src="" alt="" class="">
-                                <h5> Teclado desde js </h5>
-                                <p> $1290 </p>
-                                <button class="btnAuris"> Agregar al carrito </button>
-                            </div>
-    `;
-})
 
 
