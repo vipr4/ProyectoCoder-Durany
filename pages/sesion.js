@@ -5,18 +5,26 @@
 class Usuarios{
 
     constructor(nombreUsuario, passwordUsuario, mailUsuario, provinciaUsuario){
-        this.nombreUsuario = nombre;
-        this.passwordUsuario = password;
-        this.mailUsuario = mail;
-        this.provinciaUsuario = provincia;
+        this.nombre = nombreUsuario;
+        this.password = passwordUsuario;
+        this.mail = mailUsuario;
+        this.provincia = provinciaUsuario;
 
     }
 }
 
 let arreglo_usuarios = [];
 
-/********************************/
+/*************************/
 
+if (localStorage.getItem('arreglo_usuarios')) {
+
+    let Usuarios = JSON.parse(localStorage.getItem('arreglo_usuarios'));
+    
+    for (let i = 0; i < Usuarios.length; i++) {
+      arreglo_usuarios.push(Usuarios[i]);
+    }
+  }
 
 /*************************/
 
@@ -32,20 +40,19 @@ formulario.addEventListener("submit", (e) => {
 
 function datos_de_usuario() {
 
-    let nombre = document.getElementById("nombre");
-    let password = document.getElementById("pass");
-    let mail = document.getElementById("mail");
-    let provincia = document.getElementById("provincia");
+    let nombre = document.getElementById("nombre").value;
+    let password = document.getElementById("pass").value;
+    let mail = document.getElementById("mail").value;
+    let provincia = document.getElementById("provincia").value;
 
-    let usuario = {nombre: nombre.value , password: password.value , mail: mail.value , provincia: provincia.value};
+    let nuevo_usuario = new Usuarios( nombre, password, mail, provincia);
 
-    arreglo_usuarios.push(usuario);
+    arreglo_usuarios.push(nuevo_usuario);
 
     //LocalStorage
-    let arreglo_json = JSON.stringify(arreglo_usuarios);
-    localStorage.setItem( "arreglo_clientes", arreglo_json );
+    localStorage.setItem("arreglo_usuarios", JSON.stringify(arreglo_usuarios));
 
-    let traer_usuarios = localStorage.getItem("arreglo_clientes");
+    let traer_usuarios = localStorage.getItem("arreglo_usuarios");
     console.log(traer_usuarios);
 
     formulario.reset();
@@ -53,4 +60,32 @@ function datos_de_usuario() {
 
 let btn_registrar = document.getElementById("btn_registrarse");
 btn_registrar.addEventListener("click", datos_de_usuario);
+
+/********************/
+
+function loggin_usuario(){
+    
+    let nombre = document.getElementById("nombre").value;
+    let password = document.getElementById("pass").value;
+    let mail = document.getElementById("mail").value;
+    let provincia = document.getElementById("provincia").value;
+
+    let traer_usuarios = localStorage.getItem("arreglo_usuarios");
+    traer_usuarios = JSON.parse(traer_usuarios);
+
+    for (let nuevo_usuario of traer_usuarios){
+
+        if( nombre.value == nuevo_usuario.nombre && password.value == nuevo_usuario.password && mail.value == nuevo_usuario.mail && provincia.value == nuevo_usuario.provincia){
+
+            console.log("Bienvenido a Diamond-s");
+        }
+        else{
+            console.log("Lo sentimos el usuario no fue encontrado");
+        }
+    }
+}
+
+let btn_ingresar = document.getElementById("btn_ingresar");
+
+btn_ingresar.addEventListener("click", loggin_usuario);
 
