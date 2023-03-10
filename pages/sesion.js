@@ -2,7 +2,23 @@
 
 // Aqui se colocara nuestro inicio de sesion
 
+class Usuarios{
+
+    constructor(nombreUsuario, passwordUsuario, mailUsuario, provinciaUsuario){
+        this.nombreUsuario = nombre;
+        this.passwordUsuario = password;
+        this.mailUsuario = mail;
+        this.provinciaUsuario = provincia;
+
+    }
+}
+
 let arreglo_usuarios = [];
+
+/********************************/
+
+
+/*************************/
 
 let formulario = document.getElementById("form");
 
@@ -12,14 +28,16 @@ formulario.addEventListener("submit", (e) => {
     arreglo_usuarios;
 })
 
+/********************************/
+
 function datos_de_usuario() {
 
-    let nombre_usuario = document.getElementById("nombre");
-    let pass_usuario = document.getElementById("pass");
-    let mail_usuario = document.getElementById("mail");
-    let prov_usuario = document.getElementById("provincia");
+    let nombre = document.getElementById("nombre");
+    let password = document.getElementById("pass");
+    let mail = document.getElementById("mail");
+    let provincia = document.getElementById("provincia");
 
-    let usuario = {nombre: nombre_usuario.value , password: pass_usuario.value , mail: mail_usuario.value , provincia: prov_usuario.value};
+    let usuario = {nombre: nombre.value , password: password.value , mail: mail.value , provincia: provincia.value};
 
     arreglo_usuarios.push(usuario);
 
@@ -29,6 +47,8 @@ function datos_de_usuario() {
 
     let traer_usuarios = localStorage.getItem("arreglo_clientes");
     console.log(traer_usuarios);
+
+    formulario.reset();
 }
 
 let btn_registrar = document.getElementById("btn_registrarse");
