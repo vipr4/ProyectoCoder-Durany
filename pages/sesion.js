@@ -72,11 +72,11 @@ function loggin_usuario(){
 
     let traer_usuarios = localStorage.getItem("arreglo_usuarios");
     traer_usuarios = JSON.parse(traer_usuarios);
+    console.log(traer_usuarios);
 
     for (let nuevo_usuario of traer_usuarios){
 
         if( nombre.value == nuevo_usuario.nombre && password.value == nuevo_usuario.password && mail.value == nuevo_usuario.mail && provincia.value == nuevo_usuario.provincia){
-
             console.log("Bienvenido a Diamond-s");
         }
         else{

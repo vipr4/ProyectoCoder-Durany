@@ -130,66 +130,195 @@ main p {
     height: 20px;
 }
 
-/* Aqui se colocaran los estilos de las secciones de busqueda */
+/* Aqui se colocaran los estilos de las secciones de busqueda-items */
 
-/* grids */
-
-.grids-section {
-    display: grid;
-    grid-template-columns: 3fr;
-
-    grid-template-areas: 
-    "imagenes"
-    "imagenes"
-    "imagenes";
-
-    border: 1.4px solid rgb(74, 68, 68);
-    margin: 80px 160px;
+.contenedor{
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    contain: paint;
 }
 
-.grids-section img {
-    width: 180px;
-    height: 180px;
-    margin-right: 50px;
+.contenedor .contenedor-items{
+    margin-top: 30px;
+    width: 800px;
+}
+
+.contenedor .contenedor-items .item{
+    padding: 20px;
+    display: inline-block;
+}
+
+.contenedor .item .img-item{
+    width: 200px;
+    height: 200px;
+}
+
+.contenedor .item .img-item:hover{
+    border: 1px solid rgb(25, 149, 25);
+    transform: scale(1.03);
+    transition-duration: 0.5s;
+}
+
+.contenedor-items .item .titulo-item{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.contenedor-items .item .btnAuris{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background: black;
+    color: antiquewhite;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor .item .btnAuris:hover{
+    transform: scale(1.02);
+    transition-duration: 0.3s;
+}
+
+/* Carrito */
+
+.carrito {
+    border: 1px solid grey;
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+}
+
+.carrito .header-carrito {
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.carrito .carrito-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid grey;
+    padding: 20px;
+}
+
+.carrito .carrito-item img{
+    margin-right: 20px;
+}
+
+.carrito .carrito-item .carrito-item-titulo{
+    display:block;
+    font-weight: bold;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-/* Estilos de la section busqueda imagenes */
+.carrito .carrito-item .selector-cantidad{
+    display: inline-block;
+    margin-right: 25px;
+}
 
-.imagenes-busqueda {
-    grid-area: imagenes;
+.carrito .carrito-item .carrito-item-cantidad{
+    border: none;
+    font-size: 14px;
+    background: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
     text-align: center;
 }
 
-.auriculares {
+.carrito .carrito-item .selector-cantidad i{
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.carrito .carrito-item .carrito-item-precio{
+    font-weight: bold;
     display: inline-block;
-    margin: 46px 0px;
-}
-.auriculares h5 {
-    margin: 5px 0px;
-}
-.auriculares p {
-    margin: 5px 0px;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-.auriculares img {
-    margin-left: 40px;
+.carrito .carrito-item .btn-eliminar{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: black;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border:1px solid black;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
 }
 
-.auriculares img:hover{
-    transition-duration: 0.4s;
-    transform: scale(1.04);
-    border: 1px solid rgb(92, 189, 2);
+.carrito .carrito-item .btn-eliminar i{
+    pointer-events: none;
 }
 
-/* Estilos de botones */
-
-.auriculares button:hover{
-    transition-duration: 0.1s;
-    transform: scale(1.02);
+.carrito-total{
+    background-color: antiquewhite;
+    padding: 20px;
 }
 
+.carrito-total .fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
+.carrito .btn-pagar{
+    display: block;
+    width: 100%;
+    border: none;
+    background: black;
+    color: antiquewhite;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.carrito .btn-pagar:hover{
+    transform: scale(1.03);
+}
 
 /* AQUI SE COLOCARAN LOS ESTILOS DE SESION.HTML */
 

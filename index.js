@@ -14,9 +14,33 @@ presentacion.addEventListener("mouseout", function(){
 })
 
 
+
 //Evento de carrito
 
+class Cart{
+
+    constructor(nombreProducto, precioProducto, imgProducto, cantidadProducto){
+        this.nombre = nombreProducto;
+        this.precio = precioProducto;
+        this.img = imgProducto;
+        this.cantidad = cantidadProducto;
+    }
+}
+
 let carrito_storage = [];
+
+/*****************/
+
+if (localStorage.getItem('ListaProductos')) {
+
+    let Cart = JSON.parse(localStorage.getItem('ListaProductos'));
+    
+    for (let i = 0; i < Cart.length; i++) {
+      carrito_storage.push(Cart[i]);
+    }
+  }
+
+/*****************/
 
 function agregar_al_carrito(e){
 
@@ -27,15 +51,10 @@ function agregar_al_carrito(e){
     let abuelo = padre.parentNode;
 
     let nombre_producto = padre.querySelector("h5").textContent;
-    let precio_producto = padre.querySelector("p").textContent;
+    let precio_producto = padre.querySelector("span").textContent;
     let img_producto = padre.querySelector("img").src;
 
-    // console.log(nombre_producto);
-    // console.log(precio_producto);
-    // console.log(img_producto);
-
     let producto = {
-
         nombre: nombre_producto,
         precio: precio_producto,
         img: img_producto,
@@ -45,22 +64,18 @@ function agregar_al_carrito(e){
     // Local Storage
     carrito_storage.push(producto);
 
-    let guardar_carrito = JSON.stringify(carrito_storage);
-    localStorage.setItem("Lista_productos", guardar_carrito);
+    localStorage.setItem("ListaProductos", JSON.stringify(carrito_storage));
 
-    let traer_producto = localStorage.getItem("Lista_productos");
+    let traer_producto = localStorage.getItem("ListaProductos");
     console.log(traer_producto);
 }
 
 let btn_carrito = document.querySelectorAll(".btnAuris");
 
-console.log(btn_carrito);
-
 for ( let boton of btn_carrito){
 
     boton.addEventListener("click", agregar_al_carrito);
-
 }
 
 
-
+let contenedorItems = document.getElementById("items");
