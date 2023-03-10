@@ -27,10 +27,8 @@ function datos_de_usuario() {
     let arreglo_json = JSON.stringify(arreglo_usuarios);
     localStorage.setItem( "arreglo_clientes", arreglo_json );
 
-    for(let i = 0; i < arreglo_json.length; i++){
-
-        arreglo_json.push(arreglo_json[i]);
-    }
+    let traer_usuarios = localStorage.getItem("arreglo_clientes");
+    console.log(traer_usuarios);
 }
 
 let btn_registrar = document.getElementById("btn_registrarse");
