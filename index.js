@@ -66,8 +66,43 @@ function agregar_al_carrito(e){
 
     localStorage.setItem("ListaProductos", JSON.stringify(carrito_storage));
 
-    let traer_producto = localStorage.getItem("ListaProductos");
+    let traer_producto = JSON.parse(localStorage.getItem("ListaProductos"));
     console.log(traer_producto);
+
+    //Carrito Visible
+    let contenedorItems = document.getElementById("items");
+    contenedorItems.innerHTML = `
+                                    <span class="carrito-item-titulo"> ${producto.nombre} </span>
+                                    <div class="selector-cantidad"> 
+                                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                                    <input type="text" value="${producto.cantidad}" class="carrito-item-cantidad" disabled>
+                                    <i class="fa-solid fa-plus sumar-cantidad"></i> 
+                                    </div>
+                                    <span class="carrito-item-precio"> ${producto.precio} </span>
+                                    <div>
+                                        <span class="btn-eliminar">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </span>
+                                    </div>
+                                    `;  
+
+    traer_producto.forEach(function(){
+        contenedorItems.innerHTML =
+                                    `
+                                    <span class="carrito-item-titulo"> ${producto.nombre} </span>
+                                    <div class="selector-cantidad"> 
+                                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                                    <input type="text" value="${producto.cantidad}" class="carrito-item-cantidad" disabled>
+                                    <i class="fa-solid fa-plus sumar-cantidad"></i> 
+                                    </div>
+                                    <span class="carrito-item-precio"> ${producto.precio} </span>
+                                    <div>
+                                        <span class="btn-eliminar">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </span>
+                                    </div>
+                                    `;  
+    })
 }
 
 let btn_carrito = document.querySelectorAll(".btnAuris");
@@ -78,4 +113,3 @@ for ( let boton of btn_carrito){
 }
 
 
-let contenedorItems = document.getElementById("items");
