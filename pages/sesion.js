@@ -33,7 +33,7 @@ let formulario = document.getElementById("form");
 formulario.addEventListener("submit", (e) => {
 
     e.preventDefault();
-    arreglo_usuarios;
+    // arreglo_usuarios;
 })
 
 /********************************/
@@ -55,11 +55,21 @@ function datos_de_usuario() {
     let traer_usuarios = localStorage.getItem("arreglo_usuarios");
     console.log(traer_usuarios);
 
+    Toastify({
+        text:"Te has registrado con éxito!",
+        duration: 3000,
+        destination:"",
+        gravity:"bottom",
+        position:"left",
+        style:{
+            fontSize:"20px",
+            color:"white",
+            background:"#EEA921",
+            border_radius:"10px"
+        }
+    }).showToast();
     formulario.reset();
 }
-
-let btn_registrar = document.getElementById("btn_registrarse");
-btn_registrar.addEventListener("click", datos_de_usuario);
 
 /********************/
 
@@ -76,16 +86,45 @@ function loggin_usuario(){
 
     for (let nuevo_usuario of traer_usuarios){
 
-        if( nombre.value == nuevo_usuario.nombre && password.value == nuevo_usuario.password && mail.value == nuevo_usuario.mail && provincia.value == nuevo_usuario.provincia){
-            console.log("Bienvenido a Diamond-s");
+        if( nombre.value == nuevo_usuario.nombreUsuario && password.value == nuevo_usuario.passwordUsuario && mail.value == nuevo_usuario.mailUsuario && provincia.value == nuevo_usuario.provinciaUsuario){
+
+            Toastify({
+                text:"Has ingresado con éxito!",
+                duration: 3000,
+                destination:"",
+                gravity:"bottom",
+                position:"left",
+                style:{
+                    fontSize:"20px",
+                    color:"white",
+                    background:"black",
+                    border_radius:"10px"
+                }
+            }).showToast();
         }
         else{
-            console.log("Lo sentimos el usuario no fue encontrado");
+            Toastify({
+                text:"El usuario no ha sido registrado. Porfavor intentelo de nuevo.",
+                duration: 3000,
+                destination:"",
+                gravity:"bottom",
+                position:"left",
+                style:{
+                    fontSize:"20px",
+                    color:"white",
+                    background:"black",
+                    border_radius:"10px"
+                }
+            }).showToast();
         }
     }
+
+    formulario.reset();
 }
 
-let btn_ingresar = document.getElementById("btn_ingresar");
+let btn_registrar = document.getElementById("btn_registrarse");
+btn_registrar.addEventListener("click", datos_de_usuario);
 
+let btn_ingresar = document.getElementById("btn_ingresar");
 btn_ingresar.addEventListener("click", loggin_usuario);
 

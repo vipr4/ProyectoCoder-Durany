@@ -88,7 +88,7 @@ function agregar_al_carrito(e){
                                     </span>
                                 </div>
                                 `; 
-    }); 
+    });
 }
 
 let btn_carrito = document.querySelectorAll(".btnAuris");
