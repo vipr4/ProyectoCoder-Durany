@@ -71,32 +71,17 @@ function agregar_al_carrito(e){
 
     //Carrito Visible
     let contenedorItems = document.getElementById("items");
-    contenedorItems.innerHTML = 
-                                `
-                                <span class="carrito-item-titulo"> ${producto.nombre} </span>
-                                <div class="selector-cantidad"> 
-                                    <i class="fa-solid fa-minus restar-cantidad"></i>
-                                    <input type="text" value="${producto.cantidad}" class="carrito-item-cantidad" disabled>
-                                    <i class="fa-solid fa-plus sumar-cantidad"></i> 
-                                </div>
-                                <span class="carrito-item-precio"> ${producto.precio} </span>
-                                <div>
-                                    <span class="btn-eliminar">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </span>
-                                </div>
-                                `; 
 
-    traer_producto.forEach(function(){
-        contenedorItems.innerHTML =
+    traer_producto.forEach(function(p){
+        contenedorItems.innerHTML +=
                                 `
-                                <span class="carrito-item-titulo"> ${producto.nombre} </span>
+                                <span class="carrito-item-titulo"> ${p.nombre} </span>
                                 <div class="selector-cantidad"> 
                                     <i class="fa-solid fa-minus restar-cantidad"></i>
-                                    <input type="text" value="${producto.cantidad}" class="carrito-item-cantidad" disabled>
+                                    <input type="text" value="${p.cantidad}" class="carrito-item-cantidad" disabled>
                                     <i class="fa-solid fa-plus sumar-cantidad"></i> 
                                 </div>
-                                <span class="carrito-item-precio"> ${producto.precio} </span>
+                                <span class="carrito-item-precio"> ${p.precio} </span>
                                 <div>
                                     <span class="btn-eliminar">
                                         <i class="fa-solid fa-trash"></i>
