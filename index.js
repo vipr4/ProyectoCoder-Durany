@@ -50,16 +50,16 @@ function agregar_al_carrito(e){
     let padre = hijo.parentNode;
     let abuelo = padre.parentNode;
 
-    let nombre_producto = padre.querySelector("h5").textContent;
-    let precio_producto = padre.querySelector("span").textContent;
-    let img_producto = padre.querySelector("img").src;
+    let nombreProducto = padre.querySelector("h5").textContent;
+    let precioProducto = padre.querySelector("span").textContent;
+    let imgProducto = padre.querySelector("img").src;
 
     let producto = {
-        nombre: nombre_producto,
-        precio: precio_producto,
-        img: img_producto,
+        nombre: nombreProducto,
+        precio: precioProducto,
+        img: imgProducto,
         cantidad:1
-    };
+    }
 
     // Local Storage
     carrito_storage.push(producto);
@@ -72,23 +72,21 @@ function agregar_al_carrito(e){
     //Carrito Visible
     let contenedorItems = document.getElementById("items");
 
-    traer_producto.forEach(function(p){
+    carrito_storage.forEach(function(producto){
         contenedorItems.innerHTML +=
-                                `
-                                <span class="carrito-item-titulo"> ${p.nombre} </span>
-                                <div class="selector-cantidad"> 
-                                    <i class="fa-solid fa-minus restar-cantidad"></i>
-                                    <input type="text" value="${p.cantidad}" class="carrito-item-cantidad" disabled>
-                                    <i class="fa-solid fa-plus sumar-cantidad"></i> 
-                                </div>
-                                <span class="carrito-item-precio"> ${p.precio} </span>
-                                <div>
-                                    <span class="btn-eliminar">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </span>
-                                </div>
-                                `; 
-    });
+                             `
+                             <span class="carrito-item-titulo"> ${producto.nombre} </span>
+                             <div class="selector-cantidad"> 
+                                 <i class="fa-solid fa-minus restar-cantidad"></i>
+                                 <input type="text" value="${producto.cantidad}" class="carrito-item-cantidad" disabled>
+                                 <i class="fa-solid fa-plus sumar-cantidad"></i> 
+                                 <span class="btn-eliminar">
+                                     <i class="fa-solid fa-trash"></i>
+                                 </span>
+                             </div>
+                             <span class="carrito-item-precio"> ${producto.precio} </span>
+                            `;
+    }); 
 }
 
 let btn_carrito = document.querySelectorAll(".btnAuris");
@@ -97,5 +95,6 @@ for ( let boton of btn_carrito){
 
     boton.addEventListener("click", agregar_al_carrito);
 }
+
 
 

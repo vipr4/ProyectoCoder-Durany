@@ -274,8 +274,6 @@ main p {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    border-radius: 50%;
-    border:1px solid black;
     cursor: pointer;
     display: block;
     background: transparent;
@@ -353,4 +351,12 @@ main fieldset div {
 main fieldset button {
     margin-bottom: 20px;
     margin-right: 30px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    border-top: 1px solid rgb(41, 38, 38);
+    padding: 10px;
 }

@@ -33,7 +33,7 @@ let formulario = document.getElementById("form");
 formulario.addEventListener("submit", (e) => {
 
     e.preventDefault();
-    // arreglo_usuarios;
+    arreglo_usuarios;
 })
 
 /********************************/
