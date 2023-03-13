@@ -13,7 +13,7 @@ class Usuarios{
     }
 }
 
-let arreglo_usuarios = [];
+let arreglo_usuarios = JSON.parse(localStorage.getItem('arreglo_usuarios')) || [];
 
 /*************************/
 
@@ -33,7 +33,6 @@ let formulario = document.getElementById("form");
 formulario.addEventListener("submit", (e) => {
 
     e.preventDefault();
-    arreglo_usuarios;
 })
 
 /********************************/
@@ -80,14 +79,11 @@ function loggin_usuario(){
     let mail = document.getElementById("mail").value;
     let provincia = document.getElementById("provincia").value;
 
-    let traer_usuarios = localStorage.getItem("arreglo_usuarios");
-    traer_usuarios = JSON.parse(traer_usuarios);
-    console.log(traer_usuarios);
+    for (let usuario of arreglo_usuarios){
 
-    for (let nuevo_usuario of traer_usuarios){
-
-        if( nombre.value == nuevo_usuario.nombreUsuario && password.value == nuevo_usuario.passwordUsuario && mail.value == nuevo_usuario.mailUsuario && provincia.value == nuevo_usuario.provinciaUsuario){
-
+        if( nombre.value == usuario.nombreUsuario && password.value == usuario.passwordUsuario && mail.value == usuario.mailUsuario && provincia.value == usuario.provinciaUsuario){
+            
+            console.log("Has ingresado al sistema");
             Toastify({
                 text:"Has ingresado con éxito!",
                 duration: 3000,
